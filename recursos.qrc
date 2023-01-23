@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>iconos/ancho.png</file>
+        <file>iconos/bloc-de-dibujo.png</file>
+        <file>iconos/carpeta.png</file>
+        <file>iconos/cerrar-sesion.png</file>
+        <file>iconos/circulo.png</file>
+        <file>iconos/linea-diagonal.png</file>
+        <file>iconos/nueva-ventana.png</file>
+        <file>iconos/paleta-de-color.png</file>
+        <file>iconos/rectangulo.png</file>
+    </qresource>
+</RCC>

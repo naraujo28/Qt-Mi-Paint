@@ -52,12 +52,12 @@ void Principal::mousePressEvent(QMouseEvent *event)
 void Principal::mouseMoveEvent(QMouseEvent *event)
 {
     // Validar si se puede dibujar
-    if ( !mPuedeDibujar ) {
+    /*if ( !mPuedeDibujar ) {
         // Acepta el evento
         event->accept();
         // Salir del método
         return;
-    }
+    }*/
     // Capturar el punto a donde se mueve el mouse
     mFinal = event->pos();
     // Crear un pincel y establecer atributos
