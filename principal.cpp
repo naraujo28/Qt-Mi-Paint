@@ -59,7 +59,7 @@ void Principal::mouseMoveEvent(QMouseEvent *event)
         // Salir del método
         return;
     }*/
-    if(m_opcion == 1)
+    if(m_opcion == 1){
     // Capturar el punto a donde se mueve el mouse
     mFinal = event->pos();
     // Crear un pincel y establecer atributos
@@ -75,6 +75,7 @@ void Principal::mouseMoveEvent(QMouseEvent *event)
     update();
     // actualizar el punto inicial
     mInicial = mFinal;
+    }
 }
 
 void Principal::mouseReleaseEvent(QMouseEvent *event)
@@ -196,7 +197,6 @@ void Principal::on_actionLibre_triggered()
 void Principal::on_actionLineas_triggered()
 {
     m_opcion = 2;
-    m_toogle = true;
 }
 
 void Principal::on_actionRect_nculos_triggered()
@@ -207,5 +207,22 @@ void Principal::on_actionRect_nculos_triggered()
 void Principal::on_actionCircunferencias_triggered()
 {
     m_opcion = 4;
+}
+
+
+void Principal::on_actionAbrir_triggered()
+{
+    QString nombreArchivo = QFileDialog::getOpenFileName(this,"Imagen",QDir::home().absolutePath(),"Imagenes(*.jpg *.jpeg *.png);;Todos los ficheros(*)");
+
+    if (nombreArchivo.isNull()){
+        QMessageBox::warning(this, "Mi Paint", "No se puede abrir el archivo");
+        return;
+    }
+    m_foto.load(nombreArchivo);
+    m_foto = m_foto.scaled(ui->centralwidget->size(), Qt::KeepAspectRatio);
+    mImagen = new QImage(m_foto);
+
+    mPainter = new QPainter(mImagen);
+    mPainter->setRenderHint(QPainter::Antialiasing);
 }
 

@@ -9,5 +9,7 @@
         <file>iconos/nueva-ventana.png</file>
         <file>iconos/paleta-de-color.png</file>
         <file>iconos/rectangulo.png</file>
+        <file>iconos/anadir-imagen.png</file>
+        <file>iconos/pintar.png</file>
     </qresource>
 </RCC>

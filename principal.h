@@ -50,9 +50,11 @@ private slots:
 
     void on_actionCircunferencias_triggered();
 
+    void on_actionAbrir_triggered();
+
 private:
     Ui::Principal *ui;
-    QImage *mImagen;        // Imagen sobre la que se va a dibujar
+    QImage *mImagen, m_foto;        // Imagen sobre la que se va a dibujar
     QPainter *mPainter;     // Painter de la imagen
     QPoint mInicial;        // Punto incial para dibujar la línea
     QPoint mFinal;          // Punto final para dibujar la línea
@@ -61,6 +63,5 @@ private:
     QColor mColor;          // Define el color del pincel
     int mNumLineas;         // Cuenta el número de líneas
     int m_opcion;
-    bool m_toogle = true;
 };
 #endif // PRINCIPAL_H
